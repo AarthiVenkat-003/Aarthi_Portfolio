@@ -1,0 +1,856 @@
+/* ===================================
+   RESPONSIVE DESIGN
+   Mobile-First Approach
+   =================================== */
+
+/* ===================================
+   MOBILE STYLES (Base)
+   =================================== */
+
+@media (max-width: 768px) {
+    /* Typography Adjustments */
+    html {
+        font-size: 14px;
+    }
+
+    h1, h2, h3, h4, h5, h6 {
+        font-weight: 700;
+    }
+
+    /* Navigation Bar */
+    .nav-menu {
+        display: none;
+    }
+
+    .hamburger {
+        display: flex;
+    }
+
+    .nav-container {
+        padding: 0 1.5rem;
+    }
+
+    /* Mobile Menu */
+    .mobile-menu {
+        display: none;
+    }
+
+    .mobile-menu.active {
+        display: flex;
+    }
+
+    /* Home Section */
+    .home {
+        margin-top: 60px;
+    }
+
+    .home-container {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+
+    .name {
+        font-size: clamp(2rem, 8vw, 2.5rem);
+    }
+
+    .title {
+        font-size: 1.5rem;
+    }
+
+    .home-image {
+        display: none;
+    }
+
+    .home-buttons {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .btn {
+        width: 100%;
+        justify-content: center;
+    }
+
+    /* Container Adjustments */
+    .container {
+        padding: 0 1rem;
+    }
+
+    section {
+        padding: 3rem 0;
+    }
+
+    /* Section Titles */
+    .section-title {
+        margin-bottom: 2rem;
+    }
+
+    .section-title h2 {
+        font-size: 1.8rem;
+    }
+
+    /* About Section */
+    .about-content {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+
+    .image-card {
+        aspect-ratio: 1;
+        max-width: 100%;
+    }
+
+    .about-img {
+        width: 100%;
+        height: 100%;
+    }
+
+    .about-paragraph {
+        font-size: 1rem;
+    }
+
+    .about-cards {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+
+    .about-card {
+        padding: 1rem;
+    }
+
+    .about-card h3 {
+        font-size: 1rem;
+    }
+
+    .about-card p {
+        font-size: 0.85rem;
+    }
+
+    /* Skills Section */
+    .skills-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+
+    .skill-category {
+        padding: 1.5rem;
+    }
+
+    .category-title {
+        font-size: 1.1rem;
+        margin-bottom: 1rem;
+    }
+
+    .skills-list {
+        gap: 1rem;
+    }
+
+    .skill-item {
+        animation: none;
+    }
+
+    .soft-skills {
+        gap: 0.5rem;
+    }
+
+    .soft-skill-tag {
+        padding: 0.4rem 0.8rem;
+        font-size: 0.8rem;
+    }
+
+    /* Resume Section */
+    .resume-tabs {
+        flex-direction: column;
+        gap: 0.5rem;
+        border-bottom: none;
+        border-left: 2px solid var(--color-border);
+        padding: 0;
+        padding-left: 1rem;
+    }
+
+    .tab-btn {
+        padding: 0.5rem 0;
+        text-align: left;
+        border-bottom: none;
+        border-left: 3px solid transparent;
+        margin-bottom: 0;
+        margin-left: -1rem;
+        padding-left: 1rem;
+        font-size: 0.95rem;
+    }
+
+    .tab-btn.active {
+        border-left-color: var(--color-primary);
+        border-bottom: none;
+    }
+
+    .tab-btn:hover {
+        border-left-color: var(--color-primary);
+    }
+
+    .timeline::before {
+        left: 0;
+    }
+
+    .timeline-item {
+        padding-left: 2rem;
+    }
+
+    .timeline-marker {
+        left: -6px;
+        width: 12px;
+        height: 12px;
+    }
+
+    .timeline-content {
+        padding: 1rem;
+    }
+
+    .timeline-content h3 {
+        font-size: 1rem;
+    }
+
+    .timeline-subtitle {
+        font-size: 0.85rem;
+    }
+
+    .timeline-date {
+        font-size: 0.8rem;
+    }
+
+    .timeline-description {
+        font-size: 0.9rem;
+    }
+
+    /* Contact Section */
+    .contact-content {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+
+    .contact-methods {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1rem;
+    }
+
+    .contact-card {
+        padding: 1.5rem 1rem;
+    }
+
+    .contact-icon {
+        font-size: 1.5rem;
+    }
+
+    .contact-card h3 {
+        font-size: 0.95rem;
+    }
+
+    .contact-card p {
+        font-size: 0.8rem;
+    }
+
+    .contact-form {
+        gap: 1rem;
+    }
+
+    .form-input {
+        padding: 0.75rem;
+        font-size: 1rem;
+    }
+
+    textarea.form-input {
+        min-height: 120px;
+    }
+
+    /* Footer */
+    .footer {
+        padding: 1.5rem 0;
+    }
+
+    .footer-content p {
+        font-size: 0.85rem;
+    }
+
+    .footer-socials {
+        gap: 0.75rem;
+    }
+
+    .social-link {
+        width: 35px;
+        height: 35px;
+        font-size: 1rem;
+    }
+
+    .back-to-top {
+        width: 45px;
+        height: 45px;
+        bottom: 1rem;
+        right: 1rem;
+        font-size: 1.2rem;
+    }
+
+    /* Success Message */
+    .success-message {
+        bottom: 1rem;
+        right: 1rem;
+        left: 1rem;
+        padding: 1rem;
+    }
+
+    /* Home Buttons Animation */
+    .greeting {
+        font-size: 1rem;
+    }
+
+    .intro-text {
+        font-size: 1rem;
+        margin-bottom: 1.5rem;
+    }
+
+    /* Progress Bar Spacing */
+    .progress-bar {
+        height: 5px;
+    }
+
+    /* Cursor and Typing Text */
+    .cursor {
+        height: 1.5rem;
+    }
+
+    /* Image wrapper adjustments */
+    .image-wrapper {
+        aspect-ratio: auto;
+        max-width: 300px;
+        margin: 0 auto;
+    }
+}
+
+/* ===================================
+   TABLET STYLES
+   =================================== */
+
+@media (min-width: 769px) and (max-width: 1024px) {
+    html {
+        font-size: 15px;
+    }
+
+    .container {
+        padding: 0 1.5rem;
+    }
+
+    section {
+        padding: 4rem 0;
+    }
+
+    .home-container {
+        grid-template-columns: 1fr 1fr;
+        gap: 2rem;
+    }
+
+    .home-image {
+        display: block;
+    }
+
+    .image-wrapper {
+        aspect-ratio: 0.9;
+    }
+
+    .name {
+        font-size: clamp(2.2rem, 6vw, 3.5rem);
+    }
+
+    .title {
+        font-size: 1.8rem;
+    }
+
+    .about-content {
+        grid-template-columns: 1fr 1fr;
+        gap: 3rem;
+    }
+
+    .image-card {
+        aspect-ratio: 0.8;
+    }
+
+    .skills-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 2rem;
+    }
+
+    .contact-content {
+        grid-template-columns: 1fr 1fr;
+        gap: 3rem;
+    }
+
+    .contact-methods {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .resume-tabs {
+        flex-wrap: wrap;
+        gap: 0.5rem;
+    }
+
+    .tab-btn {
+        padding: 0.75rem 1.25rem;
+    }
+
+    .section-title h2 {
+        font-size: 2.2rem;
+    }
+
+    .home-buttons {
+        flex-wrap: wrap;
+    }
+}
+
+/* ===================================
+   DESKTOP STYLES
+   =================================== */
+
+@media (min-width: 1025px) {
+    .home-container {
+        grid-template-columns: 1fr 1fr;
+        gap: 4rem;
+    }
+
+    .image-wrapper {
+        aspect-ratio: 1;
+    }
+
+    .about-content {
+        grid-template-columns: 1fr 1fr;
+        gap: 4rem;
+    }
+
+    .skills-grid {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 2.5rem;
+    }
+
+    .contact-methods {
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    .contact-content {
+        grid-template-columns: 1fr 1fr;
+        gap: 4rem;
+    }
+}
+
+/* ===================================
+   ULTRA-WIDE SCREENS
+   =================================== */
+
+@media (min-width: 1441px) {
+    .container {
+        max-width: 1400px;
+    }
+
+    .skills-grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    .contact-methods {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    }
+}
+
+/* ===================================
+   LANDSCAPE MODE (Mobile)
+   =================================== */
+
+@media (max-height: 600px) and (orientation: landscape) {
+    .home {
+        min-height: auto;
+        padding: 2rem 0;
+    }
+
+    .home-container {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+
+    .name {
+        font-size: 1.8rem;
+        margin-bottom: 0.25rem;
+    }
+
+    .title {
+        font-size: 1.2rem;
+        min-height: 2rem;
+    }
+
+    .intro-text {
+        font-size: 0.9rem;
+        margin-bottom: 0.75rem;
+    }
+
+    .home-buttons {
+        gap: 0.75rem;
+        margin-bottom: 0;
+    }
+
+    .btn {
+        padding: 0.6rem 1.2rem;
+        font-size: 0.85rem;
+    }
+
+    .scroll-indicator {
+        display: none;
+    }
+
+    .greeting {
+        display: none;
+    }
+}
+
+/* ===================================
+   MEDIUM MOBILE (480px)
+   =================================== */
+
+@media (min-width: 481px) and (max-width: 576px) {
+    .home-buttons {
+        flex-direction: row;
+        gap: 1rem;
+    }
+
+    .btn {
+        flex: 1;
+    }
+
+    .contact-methods {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .skills-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* ===================================
+   SMALL TABLET (577px)
+   =================================== */
+
+@media (min-width: 577px) and (max-width: 768px) {
+    .home-container {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+
+    .name {
+        font-size: 2.5rem;
+    }
+
+    .title {
+        font-size: 1.5rem;
+    }
+
+    .about-content {
+        grid-template-columns: 1fr;
+    }
+
+    .skills-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1.5rem;
+    }
+
+    .contact-methods {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .home-buttons {
+        flex-direction: row;
+    }
+}
+
+/* ===================================
+   LARGE TABLET / SMALL DESKTOP (769px - 1024px)
+   =================================== */
+
+@media (min-width: 769px) and (max-width: 1024px) {
+    .section-title h2 {
+        font-size: 2rem;
+    }
+
+    .skills-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .contact-methods {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* ===================================
+   DESKTOP MENU ADJUSTMENTS
+   =================================== */
+
+@media (min-width: 769px) {
+    .hamburger {
+        display: none;
+    }
+
+    .mobile-menu {
+        display: none !important;
+    }
+
+    .nav-menu {
+        display: flex;
+    }
+}
+
+/* ===================================
+   HIGH RESOLUTION DISPLAYS
+   =================================== */
+
+@media (min-width: 2560px) {
+    html {
+        font-size: 18px;
+    }
+
+    .container {
+        max-width: 1600px;
+    }
+
+    section {
+        padding: 8rem 0;
+    }
+
+    .name {
+        font-size: 5rem;
+    }
+
+    .title {
+        font-size: 2.5rem;
+    }
+
+    .skills-grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    .contact-methods {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+/* ===================================
+   RETINA DISPLAYS / PIXEL DENSITY
+   =================================== */
+
+@media (-webkit-min-device-pixel-ratio: 2),
+       (min-resolution: 192dpi) {
+    /* Optimize for high DPI displays */
+    body {
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+    }
+}
+
+/* ===================================
+   TOUCH DEVICE OPTIMIZATIONS
+   =================================== */
+
+@media (hover: none) and (pointer: coarse) {
+    /* Increase touch target sizes */
+    .btn {
+        padding: 1rem 2.5rem;
+        font-size: 1.1rem;
+    }
+
+    .nav-link {
+        padding: 0.5rem 1rem;
+    }
+
+    .contact-card {
+        padding: 2.5rem 2rem;
+    }
+
+    .form-input {
+        padding: 1.2rem;
+        font-size: 16px; /* Prevents zoom on iOS */
+    }
+
+    /* Remove hover effects on touch devices */
+    .btn:hover,
+    .contact-card:hover,
+    .about-card:hover,
+    .skill-category:hover {
+        transform: none;
+    }
+
+    /* Disable hover effects but keep focus */
+    a:active {
+        color: var(--color-secondary);
+    }
+}
+
+/* ===================================
+   NO JAVASCRIPT FALLBACK
+   =================================== */
+
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+
+    html {
+        scroll-behavior: auto;
+    }
+}
+
+/* ===================================
+   DARK MODE (Already Dark Theme)
+   Additional Adjustments
+   =================================== */
+
+@media (prefers-color-scheme: dark) {
+    /* Already optimized for dark mode */
+}
+
+/* ===================================
+   LIGHT MODE FALLBACK
+   =================================== */
+
+@media (prefers-color-scheme: light) {
+    :root {
+        --color-bg-primary: #FFFFFF;
+        --color-bg-secondary: #F8FAFC;
+        --color-text: #0F172A;
+        --color-text-secondary: #475569;
+        --color-text-tertiary: #94A3B8;
+    }
+
+    .navbar {
+        background: rgba(248, 250, 252, 0.7);
+    }
+
+    .mobile-menu {
+        background: rgba(248, 250, 252, 0.95);
+    }
+}
+
+/* ===================================
+   PRINT STYLES
+   =================================== */
+
+@media print {
+    /* Hide navigation and interactive elements */
+    .navbar,
+    .hamburger,
+    .mobile-menu,
+    .scroll-indicator,
+    .scroll-progress,
+    .back-to-top,
+    .contact-form,
+    .home-buttons,
+    .btn {
+        display: none !important;
+    }
+
+    /* Optimize for print */
+    body {
+        background: white;
+        color: black;
+    }
+
+    a {
+        color: blue;
+        text-decoration: underline;
+    }
+
+    section {
+        page-break-inside: avoid;
+        padding: 1rem 0;
+    }
+
+    .timeline-item {
+        page-break-inside: avoid;
+    }
+}
+
+/* ===================================
+   SPECIFIC DEVICE OPTIMIZATIONS
+   =================================== */
+
+/* iPhone SE / Small Phones */
+@media (max-width: 375px) {
+    .name {
+        font-size: 1.8rem;
+    }
+
+    .title {
+        font-size: 1.2rem;
+    }
+
+    .btn {
+        padding: 0.7rem 1.4rem;
+        font-size: 0.9rem;
+    }
+
+    .home-buttons {
+        flex-direction: column;
+    }
+}
+
+/* iPhone Pro Max / Large Phones */
+@media (min-width: 428px) and (max-width: 480px) {
+    .name {
+        font-size: 2.2rem;
+    }
+
+    .title {
+        font-size: 1.4rem;
+    }
+
+    .home-buttons {
+        flex-direction: row;
+        gap: 1rem;
+    }
+
+    .btn {
+        flex: 1;
+    }
+}
+
+/* iPad / Tablet Portrait */
+@media (min-width: 768px) and (max-width: 1024px) and (orientation: portrait) {
+    .skills-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .contact-methods {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* iPad / Tablet Landscape */
+@media (min-width: 1025px) and (max-width: 1366px) and (orientation: landscape) {
+    .skills-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .contact-methods {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+/* ===================================
+   ANIMATION PERFORMANCE
+   =================================== */
+
+@media (prefers-reduced-motion: no-preference) {
+    /* Animations are enabled */
+}
+
+@media (prefers-reduced-motion: reduce) {
+    /* Animations are disabled */
+    * {
+        animation: none !important;
+        transition: none !important;
+    }
+}
